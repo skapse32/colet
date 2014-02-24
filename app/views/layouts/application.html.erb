@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	 	<title>CoLET</title>
+	  	<!--[if lt IE 9]>
+	    	<script type="text/javascript" src="assets/js/html5.js"></script>
+	  	<![endif]-->
+	  	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
+	  	<link rel="icon" href="/images/favicon/favicon.ico"	type="image/x-icon">
+		<link rel='stylesheet' id='general-css' href='assets/stylesheets/application.css'	type='text/css' media='all' />
+		
+		<%= stylesheet_link_tag "application", :media => "all" %>
+
+		<script type='text/javascript' src='javascripts/jquery/jquery.js'></script>
+		<script type='text/javascript' src='javascripts/jquery/jquery-migrate.min.js'></script>
+		<script type='text/javascript' src='javascripts/comment-reply.min.js'></script>
+		<script type='text/javascript' src='javascripts/jquery/jquery.hoverIntent.min.js'></script>
+		<script type='text/javascript' src='javascripts/jquery/jquery.placeholder.min.js'></script>
+		<script type='text/javascript' src='javascripts/jplayer/jquery.jplayer.min.js'></script>
+		<script type='text/javascript' src='javascripts/jquery/jquery.raty.min.js'></script>
+		<script type='text/javascript' src='javascripts/general.js'></script>
+		<script type='text/javascript' src='javascripts/jquery/jquery.themexSlider.js'></script>
+
+		
+		<style type="text/css">
+	    .featured-content{}body, input, select, textarea{}h1,h2,h3,h4,h5,h6, .header-navigation div > ul > li > a{}input[type="submit"], input[type="button"], .button, .jp-play-bar, .jp-volume-bar-value, .free-course .course-price .price-text, .lessons-listing .lesson-attachments a, ul.styled-list.style-4 li:before, .woocommerce a.button.alt, .woocommerce button.button.alt, .woocommerce input.button.alt, .woocommerce #respond input#submit.alt, .woocommerce #content input.button.alt, .woocommerce-page a.button.alt, .woocommerce-page button.button.alt, .woocommerce-page input.button.alt, .woocommerce-page #respond input#submit.alt, .woocommerce-page #content input.button.alt, .woocommerce a.button.alt:hover, .woocommerce button.button.alt:hover, .woocommerce input.button.alt:hover, .woocommerce #respond input#submit.alt:hover, .woocommerce #content input.button.alt:hover, .woocommerce-page a.button.alt:hover, .woocommerce-page button.button.alt:hover, .woocommerce-page input.button.alt:hover, .woocommerce-page #respond input#submit.alt:hover, .woocommerce-page #content input.button.alt:hover{}.free-course .course-price .corner{}.button.secondary, .quiz-listing .question-number, .lessons-listing .lesson-title .course-status, .course-price .price-text, .course-price .corner, .course-progress span, .questions-listing .question-replies, .course-price .corner-background, .user-links a:hover, .payment-listing .expanded .toggle-title:before, .styled-list.style-5 li:before, .faq-toggle .toggle-title:before, ul.styled-list.style-1 li:before, .woocommerce a.button, .woocommerce button.button, .woocommerce input.button, .woocommerce #respond input#submit, .woocommerce #content input.button, .woocommerce-page a.button, .woocommerce-page button.button, .woocommerce-page input.button, .woocommerce-page #respond input#submit, .woocommerce-page #content input.button, .woocommerce a.button:hover, .woocommerce button.button:hover, .woocommerce input.button:hover, .woocommerce #respond input#submit:hover, .woocommerce #content input.button:hover, .woocommerce-page a.button:hover, .woocommerce-page button.button:hover, .woocommerce-page input.button:hover, .woocommerce-page #respond input#submit:hover, .woocommerce-page #content input.button:hover{}a, a:hover, a:focus, ul.styled-list li > a:hover{}.button.dark, .jp-gui, .jp-controls a, .jp-video-play-icon, .header-wrap, .header-navigation ul ul, .select-menu, .search-form, .mobile-search-form, .login-button .tooltip-text, .footer-wrap, .site-footer:after, .site-header:after, .widget-title{}.jp-jplayer{}.widget-title{}::-moz-selection{}::selection{}
+		</style>
+		<style type="text/css">
+	    	.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}
+		</style>
+
+		<style type="text/css">
+	    	@font-face {
+	    	font-family: "Crete Round";
+	    	src: url("assets/fonts/creteround-regular-webfont.eot");
+			src: url("assets/fonts/creteround-regular-webfont.eot?#iefix") format("embedded-opentype"),
+				url("assets/fonts/creteround-regular-webfont.woff") format("woff"),
+	        	url("assets/fonts/creteround-regular-webfont.ttf") format("truetype"),
+	        	url("assets/fonts/creteround-regular-webfont.svg#crete_roundregular") format("svg");
+	    	font-weight: normal;
+	    	font-style: normal;
+			}
+		</style>
+		<script type="text/javascript">
+	    	WebFontConfig = {google: { families: [ "Open Sans:400,400italic,600" ] } };
+	    	(function() {
+		      	var wf = document.createElement("script");
+				wf.src = ("https:" == document.location.protocol ? "https" : "http") + "://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js";
+				wf.type = "text/javascript";
+				wf.async = "true";
+				var s = document.getElementsByTagName("script")[0];
+				s.parentNode.insertBefore(wf, s);
+			})();
+		</script>
+	</head>
+	<body class="home page page-id-2129 page-template-default">
+  		<div class="site-wrap">
+			<!-- Header -->
+			<% if user_signed_in? %>
+	        	<%= render :partial => 'layouts/headerIn', :locals => { :current_page => @current_page } %>
+	        <% else %>
+				<%= render :partial => 'layouts/headerOut', :locals => { :current_page => @current_page } %>
+			<% end %>
+			
+			<!-- Main Content -->
+			<%= yield %>
+			
+			<!-- Footer -->
+			<% if user_signed_in? %>
+	        	<%= render :partial => 'layouts/footerIn', :locals => { :current_page => @current_page } %>
+	        <% else %>
+				<%= render :partial => 'layouts/footerOut', :locals => { :current_page => @current_page } %>
+			<% end %>
+		</div>
+	</body>
+</html>
